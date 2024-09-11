@@ -5,10 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #f4f2fd;
-}
-
 li,
 a,
 button {
@@ -21,11 +17,6 @@ button {
 }
 
 .navbar {
-    background-color: #FFFFFF;
-    position: fixed;
-    padding: 10px 80px;
-    top: 0;
-    width: 100%;
     z-index: 1;
 }
 
@@ -58,20 +49,16 @@ button {
     }
 }
 
-#home {
-    /* background-color: #89E06C; */
-    background-image: url(./images/banner.jpg);
-    background-size: cover;
+#banner {
     color: #0088a9;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 35px;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
 }
 
-.home-text {
+.banner-text {
     position: relative;
     width: 100%;
     margin: auto;
@@ -82,25 +69,24 @@ button {
     text-align: center;
 }
 
-.home-text h1 {
+.banner-text h1 {
     margin: 20px 0 20px;
     font-size: 70px;
 }
 
-.home-text h3 {
+.banner-text h3 {
     font-size: 25px;
     margin-bottom: 50px;
-    color: white;
 }
 
-.home-text h4 {
+.banner-text h4 {
     letter-spacing: 2px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.home-img {
-    width: 100%;
+.banner_img {
+    width: 100% !important;
 }
 
 @media screen and (max-width : 992px) {
@@ -110,11 +96,11 @@ button {
 }
 
 @media screen and (max-width : 500px) {
-    .home-text h1 {
+    .banner-text h1 {
         font-size: 40px;
     }
 
-    .home-text h3 {
+    .banner-text h3 {
         font-size: 20px;
     }
 }
@@ -247,9 +233,6 @@ button {
 /* project */
 
 
-
-
-
 #testimonial {
     width: 100%;
     padding-top: 35px;
@@ -275,7 +258,7 @@ button {
 }
 
 .testimonial-row {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -340,21 +323,13 @@ button {
     color: white;
 }
 
-#pricing {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0px 100px;
-    margin-top: 50px;
-    /* border: 2px solid; */
-}
-
 .pricing-heading {
     text-align: center;
     padding-top: 35px;
 }
 
 .single-card {
-    flex-basis: calc(100% / 3);
+    /* flex-basis: calc(100% / 3); */
     padding: 20px;
     /* border: 2px solid red; */
 }
@@ -498,21 +473,20 @@ button {
 
 
 /* contact */
-.contact {
+#contact {
     width: 100%;
-    background: #e7e7e7;
     padding-top: 35px;
     position: relative;
 }
 
-.contact .row form {
+#contact .row form {
     /* flex: 1 1 30rem; */
     padding: 2rem;
     margin: 2rem;
     margin-bottom: 4rem;
 }
 
-.contact .row form .box {
+#contact .row form .box {
     padding: 0.5rem 0;
     padding-left: 10px;
     margin: 0.5rem 0;
@@ -525,19 +499,19 @@ button {
     width: 100%;
 }
 
-.contact .row form input:focus {
+#contact .row form input:focus {
     outline: none !important;
 }
 
-.contact .row form textarea:focus {
+#contact .row form textarea:focus {
     outline: none !important;
 }
 
-.contact .row form .box::placeholder {
+#contact .row form .box::placeholder {
     text-transform: capitalize;
 }
 
-.contact .row form .message {
+#contact .row form .message {
     height: 10rem;
     resize: none;
 }
