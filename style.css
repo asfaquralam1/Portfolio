@@ -146,12 +146,26 @@ button {
 
 .perent {
     position: relative;
+    background-color: #202842;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
     /* width: 50%; */
+}
+
+.project_links {
+    text-align: center;
+}
+
+.project_links a {
+    font-size: 20px;
+    padding: 30px;
 }
 
 .image {
     display: block;
     width: 100%;
+    padding: 10px;
     height: auto;
 }
 
@@ -188,7 +202,7 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
     font-weight: bold;
-
+    background-color: #202842;
 }
 
 .perent:hover {
@@ -471,7 +485,7 @@ button {
     color: black;
 }
 
-.contact_me{
+.contact_me {
     background-color: #009688;
 }
 
