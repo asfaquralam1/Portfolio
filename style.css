@@ -144,13 +144,11 @@ button {
     padding: 35px 0;
 }
 
-.perent {
+/* .perent {
     position: relative;
-    background-color: #202842;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     border-radius: 10px;
     padding: 10px;
-    /* width: 50%; */
 }
 
 .project_links {
@@ -167,7 +165,71 @@ button {
     width: 100%;
     padding: 10px;
     height: auto;
+} */
+
+.perent {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
 }
+
+.perent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.project_links {
+    padding: 20px;
+    text-align: center;
+}
+
+.project_links a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project_links a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.github-link {
+    background-color: #333;
+    color: #fff;
+}
+
+.github-link:hover {
+    background-color: #444;
+}
+
+.technologies, .project-description {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.technologies {
+    font-weight: bold;
+    color: #333;
+}
+
 
 .overlay {
     position: absolute;
@@ -182,8 +244,6 @@ button {
 .overlay:hover {
     opacity: 0;
     transition: .5s ease;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .container:hover .overlay {
@@ -202,7 +262,6 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
     font-weight: bold;
-    background-color: #202842;
 }
 
 .perent:hover {
