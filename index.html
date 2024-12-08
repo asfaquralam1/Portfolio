@@ -16,8 +16,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"
         integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Portfulio</title>
+
+    <style>
+        .grid {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+          transition: opacity 0.5s ease;
+        }
+        .grid-item {
+          width: 100px;
+          height: 100px;
+          margin: 10px;
+          background-color: lightblue;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+        .category-a {
+          background-color: lightcoral;
+        }
+        .category-b {
+          background-color: lightgreen;
+        }
+    
+        /* Hide the grid when not active */
+        .hidden {
+          display: none;
+        }
+      </style>
 </head>
 
 <body>
@@ -87,7 +119,19 @@
     <section id="skill">
         <div class="container">
             <h2 class="heading">My SkillS</h2>
-            <h4>My creative skills & experiences.</h4>
+            <button id="show-educations">Education</button>
+            <button id="show-skills">SkillS</button>
+            <div class="grid" id="educations">
+                <div class="grid-item category-a">Item 1</div>
+                <div class="grid-item category-b">Item 2</div>
+                <div class="grid-item category-a">Item 3</div>
+              </div>
+              <div class="grid hidden" id="skills">
+                <div class="grid-item category-b">Item 1</div>
+                <div class="grid-item category-a">Item 2</div>
+                <div class="grid-item category-b">Item 3</div>
+              </div>
+            <!-- <h4>My creative skills & experiences.</h4>
             <p>I specialize in full-stack development with proficiency in JavaScript, Node.js, Angular, and React,
                 enabling me to build dynamic web applications. <br>
 
@@ -95,7 +139,7 @@
                 for 3D and VR development. <br>
 
                 My technical expertise enables me to tackle complex development challenges and deliver high-quality
-                solutions across various platforms and technologies.</p>
+                solutions across various platforms and technologies.</p> -->
         </div>
     </section>
 
@@ -136,7 +180,7 @@
                         </div>
                         <h6 class="technologies">Technologies</h6>
                         <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
-                        <h6 class="project-description">A versatile eCommerce platform integrated with a Point of Sale (POS) system, offering seamless online and in-store transaction management.</h6>
+                        <h6 class="project-description">A versatile eCommerce platform integrated with a POS (Point of Sale) system, offering seamless online and in-store transaction management.</h6>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -172,7 +216,7 @@
                         </div>
                         <h6 class="technologies">Technologies</h6>
                         <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
-                        <h6 class="project-description">An Informative Website</h6>
+                        <h6 class="project-description">It is an HRM (Human Resource Management) software to manage employee data, leave requests, payroll, performance evaluations, and time tracking.</h6>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -249,6 +293,29 @@
     <script>
         new WOW().init();
     </script>
+    <script>
+        // Initialize both Isotope grids
+        var iso1 = new Isotope('#educations', {
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows'
+        });
+    
+        var iso2 = new Isotope('#skills', {
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows'
+        });
+    
+        // Initially show the first grid and hide the second one
+        document.getElementById('show-educations').addEventListener('click', function() {
+          document.getElementById('educations').classList.remove('hidden');
+          document.getElementById('skills').classList.add('hidden');
+        });
+    
+        document.getElementById('show-skills').addEventListener('click', function() {
+          document.getElementById('skills').classList.remove('hidden');
+          document.getElementById('educations').classList.add('hidden');
+        });
+      </script>
 </body>
 
 </html>
