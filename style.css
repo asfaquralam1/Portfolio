@@ -97,21 +97,40 @@ button {
 }
 
 .download-btn {
+    margin-top: 2rem;
+}
+
+
+.download-btn a {
     width: 200px;
     align-items: center;
     padding: 10px;
     color: #009688;
     border: 1px solid #009688 !important;
     border-radius: 0.4rem;
-    margin-top: 1rem;
     text-align: center;
     border: none;
+    position: relative;
+    z-index: 1;
 }
 
-.download-btn:hover {
-    background-color: #009688;
-    color: black;
+.download-btn a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #009688;
+    z-index: -1;
     transition: 0.5s;
+}
+
+.download-btn a:hover span {
+    width: 100%;
+}
+
+.download-btn a:hover {
+    color: white;
 }
 
 @media screen and (max-width : 992px) {
@@ -169,6 +188,7 @@ button {
 
 .perent {
     max-width: 400px;
+    height: 500px;
     margin: 20px auto;
     border: 2px solid #f0f0f0;
     border-radius: 10px;
@@ -176,6 +196,7 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 .perent:hover {
@@ -189,45 +210,54 @@ button {
     border-bottom: 2px solid #f0f0f0;
 }
 
+.carousel-control-prev-icon {
+    background-color: #009688;
+}
+
+.carousel-control-next-icon:hover {
+    background-color: #009688;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-next-icon {
+    background-color: #009688;
+}
+
+.carousel-control-next-icon:hover {
+    background-color: #009688;
+    transition: background-color 0.3s ease;
+}
+
+
 .project_links {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 
 .project_links a {
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
+    padding: 0px 20px;
     margin: 5px;
-    font-size: 16px;
+    font-size: 24px;
     color: #333;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.project_links a:hover {
-    background-color: #f0f0f0;
-    color: #007bff;
-}
-
-.github-link {
-    background-color: #333;
-    color: #fff;
-}
-
-.github-link:hover {
-    background-color: #444;
-}
-
-.technologies, .project-description {
-    font-size: 14px;
-    color: #777;
-    margin-top: 10px;
-}
-
 .technologies {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: bold;
-    color: #333;
+}
+
+.project-description {
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -581,6 +611,10 @@ button {
 .contact_me .message {
     height: 10rem;
     resize: none;
+}
+
+.send-btn {
+    background-color: white;
 }
 
 @media (max-width: 500px) {
