@@ -5,9 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --color: #009688;
+}
+
 .heading {
     text-transform: uppercase;
-    color: black;
     text-align: center;
 }
 
@@ -17,7 +20,6 @@ button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 16px;
-    color: black;
     text-decoration: none !important;
     text-transform: uppercase;
 }
@@ -54,7 +56,7 @@ button {
 
 /* about */
 
-#about {
+#banner {
     padding-top: 35px;
 }
 
@@ -78,20 +80,27 @@ button {
     width: 100% !important;
 }
 
+.icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
 .icons a {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
     border: 1px solid #009688;
     color: #009688;
-    padding: 5px 7px;
-    margin: 5px;
+    border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
 }
 
 .icons a:hover {
-    color: black;
+    color: white;
     background-color: #009688;
     transition: 0.5s;
 }
@@ -150,6 +159,15 @@ button {
 }
 
 /* about */
+.img-card {
+    background-color: var(--color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 150px; */
+    height: 150px;
+}
 
 
 /* project */

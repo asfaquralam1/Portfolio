@@ -21,57 +21,16 @@
     <title>Portfulio</title>
 
     <style>
-        #skill {
+        #resume {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
 
-        #educations {
-            padding-top: 40px;
-            padding-bottom: 50px;
+        #educations{
+            padding: 40px;
         }
-
-        #skills {
-            padding-top: 40px;
-            padding-bottom: 50px;
-        }
-
-        /* .card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            transition: transform 0.3s ease-in-out;
-        } */
-
-        /* .card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 2px solid #f1f1f1;
-        } */
-
-        .card-content {
-            padding: 10px;
-            text-align: center;
-        }
-
-        .card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #333;
-        }
-
-        /* Hover effect for cards */
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-
-
 
         /* Hide the grid when not active */
         .hidden {
@@ -94,11 +53,11 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#resume">Resume</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#skill">SkillS</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#project">Project</a>
                     </li>
@@ -110,7 +69,7 @@
         </nav>
     </header>
 
-    <section id="about">
+    <section id="banner">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12"><img class="banner_img" src="./images/profile.png" alt="banner_img">
@@ -145,7 +104,7 @@
         </div>
     </section>
 
-    <section id="skill">
+    <section id="resume">
         <div class="container">
             <h2 class="heading">My SkillS</h2>
             <button class="btn btn-success" id="show-educations">Education</button>
@@ -167,32 +126,29 @@
                 </div>
             </div>
             <div class="grid hidden" id="skills">
-                <div class="card">
-                    <img src="images/html.png" alt="">
-                    <div class="card-content">
-                        <h3>HTML</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/html.png" alt="">
-                    <div class="card-content">
-                        <h3>HTML</h3>
+                    <div class="col-md-3">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/html.png" alt="">
-                    <div class="card-content">
-                        <h3>HTML</h3>
+                    <div class="col-md-3">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/html.png" alt="">
-                    <div class="card-content">
-                        <h3>HTML</h3>
+                    <div class="col-md-3">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-
             <!-- <h4>My creative skills & experiences.</h4>
             <p>I specialize in full-stack development with proficiency in JavaScript, Node.js, Angular, and React,
                 enabling me to build dynamic web applications. <br>
@@ -274,10 +230,10 @@
                             </button>
                         </div>
                         <div class="project_links">
-                            <a href="https://asfaquralam1.github.io/Hair-Shop/" class="external-link" target="_blank">
+                            <a href="https://hrm.amanagroupbd.com/hrm/login" class="external-link" target="_blank">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
-                            <a href="https://asfaquralam1.github.io/Hair-Shop/" class="github-link" target="_blank">
+                            <a href="https://hrm.amanagroupbd.com/hrm/login" class="github-link" target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
