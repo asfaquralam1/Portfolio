@@ -29,14 +29,48 @@
         }
 
         #educations {
-           padding-top: 40px;
-           padding-bottom: 50px;
+            padding-top: 40px;
+            padding-bottom: 50px;
         }
 
         #skills {
             padding-top: 40px;
             padding-bottom: 50px;
         }
+
+        /* .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out;
+        } */
+
+        /* .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 2px solid #f1f1f1;
+        } */
+
+        .card-content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Hover effect for cards */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
 
 
         /* Hide the grid when not active */
@@ -133,16 +167,32 @@
                 </div>
             </div>
             <div class="grid hidden" id="skills">
-                <img src="images/html.png" alt="">
-                <img src="images/html.png" alt="">
-                <img src="images/html.png" alt="">
-                <img src="images/html.png" alt="">
-                <!-- <div class="row">
-                    <div class="col-md-2"><img src="images/html.png" alt=""></div>
-                    <div class="col-md-4"><img src="images/html.png" alt=""></div>
-                    <div class="col-md-4"><img src="images/html.png" alt=""></div>
-                </div> -->
+                <div class="card">
+                    <img src="images/html.png" alt="">
+                    <div class="card-content">
+                        <h3>HTML</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/html.png" alt="">
+                    <div class="card-content">
+                        <h3>HTML</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/html.png" alt="">
+                    <div class="card-content">
+                        <h3>HTML</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/html.png" alt="">
+                    <div class="card-content">
+                        <h3>HTML</h3>
+                    </div>
+                </div>
             </div>
+
             <!-- <h4>My creative skills & experiences.</h4>
             <p>I specialize in full-stack development with proficiency in JavaScript, Node.js, Angular, and React,
                 enabling me to build dynamic web applications. <br>
