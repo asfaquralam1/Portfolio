@@ -54,7 +54,7 @@ button {
 }
 
 
-/* about */
+/* banner */
 
 #banner {
     padding-top: 35px;
@@ -159,6 +159,36 @@ button {
 }
 
 /* about */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#experience {
+    padding: 40px;
+}
+
+#educations {
+    padding: 40px;
+    height: 150px !important;
+}
+
+/* Hide the grid when not active */
+.hidden {
+    display: none;
+}
+
+#skills {
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+@media (min-width: 992px) { 
+    #skills {
+        height: 200px !important;
+    }
+ }
+
 .img-card {
     background-color: var(--color);
     border-radius: 10px;
@@ -169,6 +199,7 @@ button {
     height: 150px;
     margin-top: 40px;
 }
+
 
 
 /* project */
@@ -441,13 +472,6 @@ button {
         flex-basis: 100%;
     }
 }
-
-#skills {
-    margin-top: 20px;
-    margin-bottom: 150px;
-    height: 100vh;
-}
-
 
 #services {
     width: 100%;

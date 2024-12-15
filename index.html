@@ -18,31 +18,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Portfulio</title>
+    <title>Personal Portfulio</title>
 
-    <style>
-        #resume {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        #educations {
-            padding: 40px;
-        }
-
-        /* Hide the grid when not active */
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#home">PortFulio</a>
+            <a class="navbar-brand" href="#home">Asfaqur Alam</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +36,7 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
+                        <a class="nav-link" href="#about">Resume</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#skill">SkillS</a>
@@ -104,45 +87,86 @@
         </div>
     </section>
 
-    <section id="resume">
+    <section id="about">
         <div class="container">
-            <h2 class="heading">My SkillS</h2>
+            <h2 class="heading">About</h2>
+            <button class="btn btn-success" id="show-experience">Experience</button>
             <button class="btn btn-success" id="show-educations">Education</button>
             <button class="btn btn-success" id="show-skills">SkillS</button>
-            <div class="grid" id="educations">
+            <div class="grid" id="experience">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card">
-                            <h1>Hello</h1>
-                            <p>My Friend</p>
+                            <h1>Experience</h1>
+                            <p>My Experience</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card">
-                            <h1>Hello</h1>
-                            <p>My Friend</p>
+                            <h1>Experience</h1>
+                            <p>My Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid hidden" id="educations">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h1>BSc</h1>
+                            <p>Daffodil International University</p>
+                            <p>2018-2021</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h1>HSC</h1>
+                            <p>Milestone College</p>
+                            <p>2016-2017</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="grid hidden" id="skills">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
                         <div class="img-card">
                             <img src="images/html.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
                         <div class="img-card">
                             <img src="images/html.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
                         <div class="img-card">
                             <img src="images/html.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="img-card">
+                            <img src="images/html.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
                         <div class="img-card">
                             <img src="images/html.png" alt="">
                         </div>
@@ -337,24 +361,37 @@
     </script>
     <script>
         // Initialize both Isotope grids
-        var iso1 = new Isotope('#educations', {
+        var iso1 = new Isotope('#experience', {
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
         });
 
-        var iso2 = new Isotope('#skills', {
+        var iso2 = new Isotope('#educations', {
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        });
+
+        var iso3 = new Isotope('#skills', {
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
         });
 
         // Initially show the first grid and hide the second one
+        document.getElementById('show-experience').addEventListener('click', function () {
+            document.getElementById('experience').classList.remove('hidden');
+            document.getElementById('educations').classList.add('hidden');
+            document.getElementById('skills').classList.add('hidden');
+        });
+
         document.getElementById('show-educations').addEventListener('click', function () {
             document.getElementById('educations').classList.remove('hidden');
+            document.getElementById('experience').classList.add('hidden');
             document.getElementById('skills').classList.add('hidden');
         });
 
         document.getElementById('show-skills').addEventListener('click', function () {
             document.getElementById('skills').classList.remove('hidden');
+            document.getElementById('experience').classList.add('hidden');
             document.getElementById('educations').classList.add('hidden');
         });
     </script>
