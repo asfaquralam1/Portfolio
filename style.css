@@ -165,6 +165,16 @@ button {
     align-items: center;
     text-align: center;
 }
+.card{
+    background-color: var(--color);
+    color: white;
+    text-align: justify;
+    padding: 10px 25px;
+    height: 180px;
+}
+.card p{
+    margin: 0px;
+}
 #experience {
     padding: 40px;
 }
