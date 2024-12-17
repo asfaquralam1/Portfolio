@@ -11,6 +11,7 @@
 }
 
 .heading {
+    padding: 35px 0;
     text-transform: uppercase;
     text-align: center;
 }
@@ -159,14 +160,12 @@ button {
 
 /* about */
 #about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding-top: 35px;
 }
 
 .isotop-btn{
-    padding: 10px 20px;
+    padding: 10px 50px;
+    margin-bottom: 20px;
     color: var(--bg-color);
     border: 1px solid var(--bg-color) !important;
     border-radius: 0.4rem;
@@ -181,7 +180,7 @@ button {
     color: var(--color);
     text-align: justify;
     padding: 10px 25px;
-    height: 180px;
+    height: 220px;
 }
 
 .card p {
@@ -204,24 +203,23 @@ button {
 
 #skills {
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 @media (min-width: 992px) {
     #skills {
-        height: 200px !important;
+        height: 300px !important;
     }
 }
 
 .img-card {
-    background-color: var(--color);
+    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 150px; */
     height: 150px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 
@@ -230,10 +228,6 @@ button {
 #project {
     width: 100%;
     padding-top: 35px;
-}
-
-.heading {
-    padding: 35px 0;
 }
 
 .perent {
