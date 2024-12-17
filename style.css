@@ -58,7 +58,7 @@ button {
 /* banner */
 
 #banner {
-    padding-top: 35px;
+    margin-top: 50px;
 }
 
 .banner-box {
@@ -160,10 +160,16 @@ button {
 
 /* about */
 #about {
-    padding-top: 35px;
+    margin-top: 80px;
+    margin-bottom: 170px;
 }
 
-.isotop-btn{
+/* Hide the grid when not active */
+.hidden {
+    display: none;
+}
+
+.isotop-btn {
     padding: 10px 50px;
     margin-bottom: 20px;
     color: var(--bg-color);
@@ -187,25 +193,6 @@ button {
     margin: 0px;
 }
 
-#experience {
-    padding: 40px;
-}
-
-#educations {
-    padding: 40px;
-    height: 150px !important;
-}
-
-/* Hide the grid when not active */
-.hidden {
-    display: none;
-}
-
-#skills {
-    margin-top: 20px;
-    margin-bottom: 200px;
-}
-
 @media (min-width: 992px) {
     #skills {
         height: 300px !important;
@@ -222,12 +209,10 @@ button {
     margin-top: 25px;
 }
 
-
-
 /* project */
 #project {
+    margin-top: 50px;
     width: 100%;
-    padding-top: 35px;
 }
 
 .perent {
@@ -312,13 +297,13 @@ button {
 
 /* contact */
 #contact {
+    margin-top: 50px;
     width: 100%;
-    padding-top: 35px;
     position: relative;
 }
 
 .content {
-   margin-top: 100px;
+    margin-top: 100px;
 }
 
 .title {
@@ -341,7 +326,7 @@ button {
     margin: 1rem;
 }
 
-.form_heading{
+.form_heading {
     text-align: center;
     color: var(--color);
 }
