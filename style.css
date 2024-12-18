@@ -19,8 +19,8 @@
 li,
 a,
 button {
-    font-weight: bold;
-    font-size: 16px;
+    /* font-weight: bold;
+    font-size: 16px; */
     text-decoration: none !important;
     text-transform: uppercase;
 }
@@ -180,7 +180,17 @@ button {
     position: relative;
     z-index: 1;
 }
-
+.experience-card{
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: 10px 25px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
 .card {
     background-color: var(--bg-color);
     color: var(--color);
@@ -209,6 +219,14 @@ button {
     margin-top: 25px;
 }
 
+.img-card i {
+   color: white;
+   font-size: 56px;
+}
+.img-card i:hover{
+    color: #009688;
+}
+
 /* project */
 #project {
     margin-top: 50px;
@@ -233,15 +251,15 @@ button {
     display: block;
 }
 
-.project_links a {
+.project_links p {
     background-color: var(--bg-color);
     color: var(--color);
     padding: 8px 12px;
-    border-radius: 4px;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px;
 }
 
 .image {
@@ -283,10 +301,10 @@ button {
     padding-bottom: 20px;
 }
 
-.perent:hover {
+/* .perent:hover {
     transition: .5s ease;
     transform: translateY(-4px);
-}
+} */
 
 @media (max-width: 500px) {
     .project {
@@ -399,3 +417,45 @@ button {
         margin: 10px 0;
     }
 }
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
