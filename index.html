@@ -240,15 +240,16 @@
                         <div class="project_links">
                            <p type="button" id="myBtn">View</p>
                         </div>
-                        <div id="myModal" class="modal">
+                        <div id="myModal">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
-                                <h6 class="technologies">Technologies</h6>
-                                <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
+                                <h4>Amana Food Ville</h4>
                                 <h6 class="project-description">A versatile eCommerce platform integrated with a POS (Point
                                     of Sale) system, offering seamless online and in-store transaction management.</h6>
-                                <a href="https://amanafoodville.com/" class="external-link" target="_blank">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
+                                <h6 class="technologies">Technologies</h6>
+                                <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
+                                <a href="https://amanafoodville.com/" class="modal-link" target="_blank">
+                                    Live Preview
                                 </a>
                             </div>
                         </div>
@@ -280,16 +281,21 @@
                             </button>
                         </div>
                         <div class="project_links">
-                            <a href="https://hrm.amanagroupbd.com/hrm/login" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
-                            </a>
+                            <p type="button" id="myBtn">View</p>
                         </div>
-                        <!-- <div>
-                            <h6 class="technologies">Technologies</h6>
-                            <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
-                            <h6 class="project-description">It is an HRM (Human Resource Management) software to manage
-                                employee data, leave requests, payroll, performance evaluations, and time tracking.</h6>
-                        </div> -->
+                        <div id="myModal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h4>Amana Human Resource Management</h4>
+                                <h6 class="project-description">It is an HRM (Human Resource Management) software to manage
+                                    employee data, leave requests, payroll, performance evaluations, and time tracking.</h6>
+                                    <h6 class="technologies">Technologies</h6>
+                                    <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
+                                <a href="https://amanafoodville.com/" class="modal-link" target="_blank">
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -435,7 +441,7 @@
 
         // When the user clicks the button, open the modal 
         btn.onclick = function () {
-            modal.style.display = "block";
+            modal.style.display = "flex";
         }
 
         // When the user clicks on <span> (x), close the modal
