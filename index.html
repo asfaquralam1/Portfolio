@@ -238,9 +238,9 @@
                             </button>
                         </div>
                         <div class="project_links">
-                           <p type="button" id="myBtn">View</p>
+                           <p type="button" class="myBtn">View</p>
                         </div>
-                        <div id="myModal">
+                        <div class="myModal">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <h4>Amana Food Ville</h4>
@@ -281,9 +281,9 @@
                             </button>
                         </div>
                         <div class="project_links">
-                            <p type="button" id="myBtn">View</p>
+                            <p type="button" class="myBtn">View</p>
                         </div>
-                        <div id="myModal">
+                        <div class="myModal">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <h4>Amana Human Resource Management</h4>
@@ -431,18 +431,23 @@
         });
 
         // Get the modal
-        var modal = document.getElementById("myModal");
+        var modal = document.querySelector(".myModal");
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
+        var btn = document.querySelector(".myBtn");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
         btn.onclick = function () {
+            console.log("hi");
             modal.style.display = "flex";
         }
+
+        // function openModal(){
+        //     modal.style.display = "flex";
+        // }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
