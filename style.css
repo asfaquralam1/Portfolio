@@ -10,6 +10,12 @@
     --color: white;
 }
 
+a {
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+
 .heading {
     padding: 35px 0;
     text-transform: uppercase;
@@ -104,7 +110,7 @@
 
 .download-btn a {
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--bg-color);
     border: 1px solid var(--bg-color) !important;
     border-radius: 0.4rem;
@@ -246,7 +252,6 @@
     background-color: var(--bg-color);
     color: var(--color);
     padding: 8px 12px;
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,7 +283,7 @@
 }
 
 /* The Modal (background) */
-.myModal {
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
@@ -307,10 +312,13 @@
     background-color: var(--bg-color);
     color: var(--color);
     padding: 8px 12px;
-    text-decoration: none !important;
+    width: 125px;
+    text-align: center;
+    border-radius: 5px;
     /* transition: background-color 0.3s ease; */
 }
 .modal-link:hover {
+    color: white;
     transform: scale(1.05);
 }
 
@@ -329,7 +337,6 @@
   .close:hover,
   .close:focus {
     color: #000;
-    text-decoration: none;
     cursor: pointer;
   }
 

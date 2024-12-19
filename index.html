@@ -237,14 +237,15 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="project_links">
-                           <p type="button" class="myBtn">View</p>
+                        <div class="project_links" id="section1">
+                            <p type="button" class="open-modal-btn" data-target="modal1">View Details</p>
                         </div>
-                        <div class="myModal">
+                        <div class="modal" id="modal1">
                             <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span class="close" onclick="closeModal()">&times;</span>
                                 <h4>Amana Food Ville</h4>
-                                <h6 class="project-description">A versatile eCommerce platform integrated with a POS (Point
+                                <h6 class="project-description">A versatile eCommerce platform integrated with a POS
+                                    (Point
                                     of Sale) system, offering seamless online and in-store transaction management.</h6>
                                 <h6 class="technologies">Technologies</h6>
                                 <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
@@ -280,18 +281,20 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="project_links">
-                            <p type="button" class="myBtn">View</p>
+                        <div class="project_links" id="section2">
+                            <p type="button" class="open-modal-btn" data-target="modal2">View Details</p>
                         </div>
-                        <div class="myModal">
+                        <div class="modal" id="modal2">
                             <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span class="close" onclick="closeModal()">&times;</span>
                                 <h4>Amana Human Resource Management</h4>
-                                <h6 class="project-description">It is an HRM (Human Resource Management) software to manage
-                                    employee data, leave requests, payroll, performance evaluations, and time tracking.</h6>
-                                    <h6 class="technologies">Technologies</h6>
-                                    <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
-                                <a href="https://amanafoodville.com/" class="modal-link" target="_blank">
+                                <h6 class="project-description">It is an HRM (Human Resource Management) software to
+                                    manage
+                                    employee data, leave requests, payroll, performance evaluations, and time tracking.
+                                </h6>
+                                <h6 class="technologies">Technologies</h6>
+                                <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
+                                <a href="https://hrm.amanagroupbd.com/hrm/login" class="modal-link" target="_blank">
                                     Live Preview
                                 </a>
                             </div>
@@ -323,10 +326,20 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="project_links">
-                            <a href="https://asfaquralam1.github.io/Hair-Shop/" class="external-link" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
-                            </a>
+                        <div class="project_links" id="section3">
+                            <p type="button"  class="open-modal-btn" data-target="modal3">View Details</p>
+                        </div>
+                        <div class="modal" id="modal3">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <h4>Hair Studio</h4>
+                                <h6 class="project-description">It is an informative website for hair cutting</h6>
+                                <h6 class="technologies">Technologies</h6>
+                                <h6 class="technologies">HTML, CSS, JavaScript</h6>
+                                <a href="https://asfaquralam1.github.io/Hair-Shop/" class="modal-link" target="_blank">
+                                    Live Preview
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -430,36 +443,42 @@
             document.getElementById('educations').classList.add('hidden');
         });
 
-        // Get the modal
-        var modal = document.querySelector(".myModal");
+        // Open the modal
+        document.querySelectorAll('.open-modal-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const modalId = this.getAttribute('data-target');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'flex';
+            });
+        });
 
-        // Get the button that opens the modal
-        var btn = document.querySelector(".myBtn");
+        // Close the modal
+        document.querySelectorAll('.close-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const modalId = this.getAttribute('data-target');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'none';
+            });
+        });
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        // Close the modal if clicked outside of the modal content
+        window.addEventListener('click', function (event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
 
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            console.log("hi");
-            modal.style.display = "flex";
+        function closeModal() {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
         }
 
-        // function openModal(){
-        //     modal.style.display = "flex";
-        // }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     </script>
 </body>
 
