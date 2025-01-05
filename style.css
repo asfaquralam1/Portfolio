@@ -233,6 +233,14 @@ a {
 .perent {
     position: relative;
     display: inline-block;
+    margin-bottom: 25px;
+    background-color: #1c305c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(25, 11, 215, 0.15);
+}
+
+.carousel-item img{
+    border-radius: 10px;
 }
 
 .project_links {
@@ -242,6 +250,10 @@ a {
     transform: translateX(-50%);
     display: none;
     width: 100%;
+}
+
+.open-modal-btn{
+    border-radius: 10px;
 }
 
 .perent:hover .project_links {
