@@ -158,9 +158,19 @@ a {
 /* about */
 #about {
     margin-top: 80px;
-    margin-bottom: 170px;
+    margin-bottom: 70px;
 }
-
+@media screen and (max-width : 500px) {
+    #experience{
+        margin-bottom: 650px;
+    }
+    #educations{
+        margin-bottom: 500px;
+    } 
+    #skills{
+        margin-bottom: 1500px;
+    }
+}
 /* Hide the grid when not active */
 .hidden {
     display: none;
@@ -187,6 +197,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: justify;
+    margin-bottom: 18px;
 }
 .card {
     background-color: var(--bg-color);
@@ -194,6 +205,7 @@ a {
     text-align: justify;
     padding: 10px 25px;
     height: 220px;
+    margin-bottom: 18px;
 }
 
 .card p {
