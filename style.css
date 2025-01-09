@@ -160,17 +160,33 @@ a {
     margin-top: 80px;
     margin-bottom: 70px;
 }
+
+#experience {
+    margin-bottom: 350px;
+}
+
+#educations {
+    margin-bottom: 300px;
+}
+
+#skills {
+    margin-bottom: 150px;
+}
+
 @media screen and (max-width : 500px) {
-    #experience{
+    #experience {
         margin-bottom: 650px;
     }
-    #educations{
+
+    #educations {
         margin-bottom: 500px;
-    } 
-    #skills{
+    }
+
+    #skills {
         margin-bottom: 1500px;
     }
 }
+
 /* Hide the grid when not active */
 .hidden {
     display: none;
@@ -187,7 +203,8 @@ a {
     position: relative;
     z-index: 1;
 }
-.experience-card{
+
+.experience-card {
     background-color: var(--bg-color);
     color: var(--color);
     padding: 10px 25px;
@@ -199,6 +216,7 @@ a {
     text-align: justify;
     margin-bottom: 18px;
 }
+
 .card {
     background-color: var(--bg-color);
     color: var(--color);
@@ -229,10 +247,11 @@ a {
 }
 
 .img-card i {
-   color: white;
-   font-size: 56px;
+    color: white;
+    font-size: 56px;
 }
-.img-card i:hover{
+
+.img-card i:hover {
     color: #009688;
 }
 
@@ -251,7 +270,7 @@ a {
     box-shadow: 0 0 20px rgba(25, 11, 215, 0.15);
 }
 
-.carousel-item img{
+.carousel-item img {
     border-radius: 10px;
 }
 
@@ -264,7 +283,7 @@ a {
     width: 100%;
 }
 
-.open-modal-btn{
+.open-modal-btn {
     border-radius: 10px;
 }
 
@@ -308,31 +327,39 @@ a {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Modal Content */
-  .modal-content {
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 90%;
     max-width: 600px;
-  }
+}
 
-  .modal-link {
+.modal-link {
     background-color: var(--bg-color);
     color: var(--color);
     padding: 8px 12px;
@@ -341,14 +368,15 @@ a {
     border-radius: 5px;
     /* transition: background-color 0.3s ease; */
 }
+
 .modal-link:hover {
     color: white;
     transform: scale(1.05);
 }
 
-  
-  /* The Close Button */
-  .close {
+
+/* The Close Button */
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -356,13 +384,13 @@ a {
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     cursor: pointer;
-  }
+}
 
 /* .technologies {
     margin-top: 10px;
