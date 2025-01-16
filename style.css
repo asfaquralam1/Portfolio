@@ -173,6 +173,17 @@ a {
     margin-bottom: 150px;
 }
 
+.button-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-area button:active{
+    outline: none !important;
+}
+
+
 @media screen and (max-width : 500px) {
     #experience {
         margin-bottom: 650px;
