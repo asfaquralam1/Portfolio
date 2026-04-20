@@ -1,13 +1,93 @@
+:root {
+    --bg-dark: #0a1628;
+    --bg-card: #111d33;
+    --bg-card-hover: #162544;
+    --accent: #00d4aa;
+    --accent-dim: rgba(0, 212, 170, 0.12);
+    --accent-glow: rgba(0, 212, 170, 0.3);
+    --text-primary: #e8edf5;
+    --text-secondary: #8899b4;
+    --text-muted: #556a8a;
+    --border: rgba(136, 153, 180, 0.12);
+    --surface: #0e1a2e;
+    --nav-bg: rgba(10, 22, 40, 0.85);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --bg-color: #1c305c;
-    --color: white;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -30%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob 18s ease-in-out infinite alternate;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 100, 200, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatBlob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(80px, 60px) scale(1.15);
+    }
+
+    100% {
+        transform: translate(-40px, 100px) scale(0.95);
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.4s, box-shadow 0.4s;
+}
+
+header.scrolled {
+    background: var(--bg-color) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
 }
 
 a {
@@ -179,7 +259,7 @@ a {
     justify-content: center;
 }
 
-.button-area button:active{
+.button-area button:active {
     outline: none !important;
 }
 

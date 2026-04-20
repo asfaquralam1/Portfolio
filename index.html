@@ -22,31 +22,32 @@
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#home">Asfaqur Alam</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-              </div>
+                <a class="navbar-brand" href="#home">Asfaqur<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <section id="banner">
@@ -60,13 +61,17 @@
                         <div class="banner-text">
                             <h4>Hi, Myself</h4>
                             <h1>Asfaqur Alam</h1>
-                            <h4>And I am a Jr.Software engineer</h4>
+                            <h4>Software engineer</h4>
                             <p>
                                 If you have any projects or need software for your business, feel free to contact me. I
                                 will complete your project as quickly as possible, and I am confident you will be
                                 satisfied with my work. If you're not, I will make the necessary changes until you're
                                 happy with the result.
                             </p>
+                            <div class="download-btn">
+                                <a href="https://drive.google.com/file/d/11IOR0x9XqPmTfzJh1ctErkxXHkSNqo62/view?usp=sharing"
+                                    target="_blank"><span></span>Download Cv</a>
+                            </div>
                             <div class="icons">
                                 <a href="https://www.facebook.com/asfaquralam1" target="_blank"><i
                                         class="fa-brands fa-facebook"></i></a>
@@ -74,10 +79,6 @@
                                         class="fa-brands fa-linkedin-in"></i></a>
                                 <a href="https://github.com/asfaquralam1" target="_blank"><i
                                         class="fa-brands fa-github"></i></a>
-                            </div>
-                            <div class="download-btn">
-                                <a href="https://drive.google.com/file/d/11IOR0x9XqPmTfzJh1ctErkxXHkSNqo62/view?usp=sharing"
-                                    target="_blank"><span></span>Download Cv</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +291,8 @@
                             <div class="modal-content">
                                 <span class="close" onclick="closeModal()">&times;</span>
                                 <h4>Range Fashion</h4>
-                                <h6 class="project-description">A versatile eCommerce platform offering seamless online and in-store transaction management.</h6>
+                                <h6 class="project-description">A versatile eCommerce platform offering seamless online
+                                    and in-store transaction management.</h6>
                                 <h6 class="technologies">Technologies</h6>
                                 <h6 class="technologies">HTML, CSS, JavaScript, PHP, Laravel,Mysql</h6>
                                 <a href="https://rangebd.com/" class="modal-link" target="_blank">
@@ -608,7 +610,14 @@
             });
         }
 
-
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 
