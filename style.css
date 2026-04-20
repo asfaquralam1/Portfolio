@@ -79,7 +79,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
     transition: background 0.4s, box-shadow 0.4s;
 }
 
@@ -147,88 +147,145 @@ a {
 /* banner */
 
 #banner {
-    margin-top: 50px;
-}
-
-.banner-box {
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
 }
 
 .banner-text {
     display: flex;
-    height: 100%;
-    width: 100%;
+    gap: 8px;
     flex-direction: column;
     justify-content: center;
 }
 
-.banner-text h4 {
-    font-weight: bold;
+.banner-greeting{
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+.banner-name{
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.banner-role{
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.banner-desc{
+    font-size: 1rem;
+    color: var(--text-secondary);
 }
 
 .banner_img {
     width: 100% !important;
 }
 
-.icons {
+.hero-links {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.social-icons {
+    display: flex;
     gap: 10px;
 }
 
-.icons a {
+.social-icons a {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--bg-color);
-    color: var(--bg-color);
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons a:hover {
-    color: var(--color);
-    background-color: var(--bg-color);
-    transition: 0.5s;
+.social-icons a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--accent-glow);
 }
 
-.download-btn {
-    margin-top: 2rem;
-}
-
-
-.download-btn a {
-    padding: 10px 20px;
-    font-size: 14px;
-    color: var(--bg-color);
-    border: 1px solid var(--bg-color) !important;
-    border-radius: 0.4rem;
-    text-align: center;
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: var(--accent);
+    color: var(--bg-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
     border: none;
-    position: relative;
-    z-index: 1;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px var(--accent-glow);
 }
 
-.download-btn a span {
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: 0.5s;
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--accent-glow);
+    color: var(--bg-dark);
 }
 
-.download-btn a:hover span {
-    width: 100%;
+.btn-outline-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--accent);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.download-btn a:hover {
-    color: var(--color);
+.btn-outline-custom:hover {
+    background: var(--accent-dim);
+    transform: translateY(-2px);
+    color: var(--accent);
+}
+
+/* Stats strip */
+.stats-strip {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+}
+
+.stat-item h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat-item p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
 }
 
 @media screen and (max-width : 992px) {
