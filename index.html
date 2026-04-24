@@ -108,125 +108,169 @@
 
     <section id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-12">
-                    <div class="button-area">
-                        <!-- <h2>About</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
-                        <button class="btn isotop-btn" id="show-experience">Experience</button>
-                        <button class="btn isotop-btn" id="show-educations">Education</button>
-                        <button class="btn isotop-btn" id="show-skills">SkillS</button>
-                        <button class="btn isotop-btn" id="show-skills">About Me</button>
+            <h2 class="section-heading reveal">About <span>Me</span></h2>
+            <div class="section-divider reveal"></div>
+            <p class="section-sub reveal">A quick overview of my background, skills, and professional journey.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4">
+                    <div class="about-tabs reveal">
+                        <button class="about-tab-btn active" data-tab="experience">
+                            <i class="fa-solid fa-briefcase"></i> Experience
+                        </button>
+                        <button class="about-tab-btn" data-tab="education">
+                            <i class="fa-solid fa-graduation-cap"></i> Education
+                        </button>
+                        <button class="about-tab-btn" data-tab="skills">
+                            <i class="fa-solid fa-code"></i> Skills
+                        </button>
+                        <button class="about-tab-btn" data-tab="aboutme">
+                            <i class="fa-solid fa-user"></i> About Me
+                        </button>
                     </div>
                 </div>
-                <div class="col-lg-8 col-sm-12">
-                    <div class="grid" id="experience">
+                <div class="col-lg-9 col-md-8">
+                    <!-- Experience Panel -->
+                    <div class="tab-panel active" id="panel-experience">
+                        <h3>My Experience</h3>
+                        <p>With over 2 years of experience as a full-stack developer, my work spans both front-end and
+                            back-end development, delivering seamless, dynamic, and user-friendly experiences from
+                            concept to deployment.</p>
                         <div class="row">
-                            <h3>My Experience</h3>
-                            <p>With over 2 years of experience as a full-stack developer. My work spans both front-end
-                                and back-end development, delivering seamless, dynamic, and user-friendly experiences
-                                from concept to deployment. I have created product management system, product
-                                transaction system, report system in different project.</p>
                             <div class="col-md-6">
-                                <div class="experience-card">
-                                    <p class="years">2023-Present</p>
-                                    <h4 class="degree">Jr.Software engineer</h4>
+                                <div class="timeline-card">
+                                    <span class="year-badge">2023 — Present</span>
+                                    <h4>Jr. Software Engineer</h4>
                                     <p class="institution">Amana Group LTD</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="experience-card">
-                                    <p class="years">2022(September)-2022(December)</p>
-                                    <h4 class="degree">Intern</h4>
+                                <div class="timeline-card">
+                                    <span class="year-badge">Sep 2022 — Dec 2022</span>
+                                    <h4>Intern</h4>
                                     <p class="institution">Amana Group LTD</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid hidden" id="educations">
+
+                    <!-- Education Panel -->
+                    <div class="tab-panel" id="panel-education">
+                        <h3>My Education</h3>
+                        <p>My educational qualifications are described below.</p>
                         <div class="row">
-                            <h3>My Education</h3>
-                            <p>My educational qualifications are described below.</p>
                             <div class="col-md-6">
-                                <div class="card">
-                                    <p class="years">2018 - 2021</p>
-                                    <h4 class="">Bachelor of Science</h4>
+                                <div class="timeline-card">
+                                    <span class="year-badge">2018 — 2021</span>
+                                    <h4>Bachelor of Science</h4>
                                     <p class="institution">Daffodil International University</p>
-                                    <p class="degree-info">I have completed my Bachelor of Science in Computer Science
-                                        and Engineering from Daffodil International University</p>
+                                    <p class="degree-info">Completed B.Sc. in Computer Science and Engineering from
+                                        Daffodil International University.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="card">
-                                    <p class="years">2016-2017</p>
-                                    <h4 class="degree">HSC</h4>
+                                <div class="timeline-card">
+                                    <span class="year-badge">2016 — 2017</span>
+                                    <h4>HSC</h4>
                                     <p class="institution">Milestone College</p>
-                                    <p class="degree-info">I have completed my Higher Secendary School in Science from
+                                    <p class="degree-info">Completed Higher Secondary School Certificate in Science from
                                         Milestone College.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid hidden" id="skills">
-                        <div class="row">
-                            <h3>My SkillS</h3>
-                            <p>I specialize in building robust web applications using HTML, CSS, Bootstrap, JavaScript,
-                                PHP, Laravel, and Wordpress, Mysql.</p>
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-html5"></i>
-                                </div>
+
+                    <!-- Skills Panel -->
+                    <div class="tab-panel" id="panel-skills">
+                        <h3>My Skills</h3>
+                        <p>I specialize in building robust web applications using the following technologies.</p>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fa-brands fa-html5"></i>
+                                <span>HTML5</span>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <span>CSS3</span>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-bootstrap"></i>
-                                </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <span>Bootstrap</span>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-js"></i>
-                                </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-laravel"></i>
+                                <span>Laravel</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-wordpress-simple"></i>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-solid fa-database"></i>
+                                <span>MySQL</span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-php"></i>
+                    </div>
+
+                    <!-- About Me Panel -->
+                    <div class="tab-panel" id="panel-aboutme">
+                        <h3>More About Me</h3>
+                        <div class="about-me-content">
+                            <p>
+                                I am a <strong>Jr. Software Engineer</strong> currently working at
+                                <strong>Amana Group LTD</strong>, where I develop and maintain web-based business
+                                solutions including eCommerce platforms, POS systems, HRM software, and corporate
+                                websites.
+                            </p>
+                            <p>
+                                I graduated with a <strong>B.Sc. in Computer Science & Engineering</strong> from
+                                Daffodil International University. My core stack revolves around
+                                <strong>PHP, Laravel, WordPress, JavaScript, and MySQL</strong>, and I am comfortable
+                                working across the full development lifecycle.
+                            </p>
+                            <p>
+                                I value clean code, timely delivery, and clear communication. Whether it's building a
+                                product from scratch or improving an existing system, I focus on creating solutions that
+                                genuinely serve the end user and the business.
+                            </p>
+                            <div class="about-me-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>Full-Stack Development</span>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-laravel"></i>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>eCommerce & POS Systems</span>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="img-card">
-                                    <i class="fa-brands fa-wordpress-simple"></i>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>HRM & ERP Solutions</span>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="img-card">
-                                    <i class="fa-solid fa-database"></i>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>WordPress Development</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>API Integration</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span>Responsive UI Design</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <h4>My creative skills & experiences.</h4>
-            <p>I specialize in full-stack development with proficiency in JavaScript, Node.js, Angular, and React,
-                enabling me to build dynamic web applications. <br>
-
-                I also have experience with PostgreSQL and MongoDB for database management and some knowledge of Unity
-                for 3D and VR development. <br>
-
-                My technical expertise enables me to tackle complex development challenges and deliver high-quality
-                solutions across various platforms and technologies.</p> -->
         </div>
     </section>
 
@@ -559,40 +603,6 @@
         new WOW().init();
     </script>
     <script>
-        // Initialize both Isotope grids
-        var iso1 = new Isotope('#experience', {
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows'
-        });
-
-        var iso2 = new Isotope('#educations', {
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows'
-        });
-
-        var iso3 = new Isotope('#skills', {
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows'
-        });
-
-        // Initially show the first grid and hide the second one
-        document.getElementById('show-experience').addEventListener('click', function () {
-            document.getElementById('experience').classList.remove('hidden');
-            document.getElementById('educations').classList.add('hidden');
-            document.getElementById('skills').classList.add('hidden');
-        });
-
-        document.getElementById('show-educations').addEventListener('click', function () {
-            document.getElementById('educations').classList.remove('hidden');
-            document.getElementById('experience').classList.add('hidden');
-            document.getElementById('skills').classList.add('hidden');
-        });
-
-        document.getElementById('show-skills').addEventListener('click', function () {
-            document.getElementById('skills').classList.remove('hidden');
-            document.getElementById('experience').classList.add('hidden');
-            document.getElementById('educations').classList.add('hidden');
-        });
 
         // Open the modal
         document.querySelectorAll('.open-modal-btn').forEach(button => {
@@ -629,15 +639,9 @@
             });
         }
 
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 40) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+      
     </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
