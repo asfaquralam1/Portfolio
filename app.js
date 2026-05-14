@@ -35,6 +35,7 @@ document.querySelectorAll('.about-tab-btn').forEach(btn => {
 
 /* ─── Modal logic ─── */
 function openModal(key) {
+    console.log('Opening modal for:', key);
     const data = projectData[key];
     if (!data) return;
 
